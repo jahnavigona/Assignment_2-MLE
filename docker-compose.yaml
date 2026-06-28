@@ -13,7 +13,17 @@ services:
       - ./datamart:/opt/airflow/datamart
       - ./model_store:/opt/airflow/model_store
       - ./reports:/opt/airflow/reports
-    command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true"
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow users create
+      --username admin
+      --password admin
+      --firstname Admin
+      --lastname User
+      --role Admin
+      --email admin@example.com || true
+      "
 
   airflow-webserver:
     build: .
@@ -54,6 +64,17 @@ services:
       - ./model_store:/opt/airflow/model_store
       - ./reports:/opt/airflow/reports
     command: scheduler
-
+  dashboard:
+    build: .
+    depends_on:
+      - airflow-webserver
+    volumes:
+      - ./datamart:/opt/airflow/datamart
+      - ./model_store:/opt/airflow/model_store
+      - ./reports:/opt/airflow/reports
+      - ./dashboard.py:/opt/airflow/dashboard.py
+    ports:
+      - "8501:8501"
+    command: streamlit run /opt/airflow/dashboard.py --server.address=0.0.0.0
 volumes:
   airflow_home:
