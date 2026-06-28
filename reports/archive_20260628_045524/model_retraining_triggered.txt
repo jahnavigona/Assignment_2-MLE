@@ -1,0 +1,8 @@
+Model Retraining Trigger
+========================
+
+Triggered At: 2026-06-28 04:55:13.501774
+Status: Retraining would be triggered in production.
+Reason: PSI > 0.20 or AUC < 0.85.
+
+Note: This is a placeholder task for MLOps governance demonstration.

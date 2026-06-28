@@ -1,0 +1,56 @@
+Feature Engineering Summary
+===========================
+
+Rows: 12500
+Columns: 48
+Total Missing Values: 71946
+
+Feature Columns:
+- loan_id
+- Customer_ID
+- loan_start_date
+- loan_amt
+- tenure
+- target_default
+- Annual_Income
+- Monthly_Inhand_Salary
+- Num_Bank_Accounts
+- Num_Credit_Card
+- Interest_Rate
+- Num_of_Loan
+- Type_of_Loan
+- Delay_from_due_date
+- Num_of_Delayed_Payment
+- Changed_Credit_Limit
+- Num_Credit_Inquiries
+- Credit_Mix
+- Outstanding_Debt
+- Credit_Utilization_Ratio
+- Payment_of_Min_Amount
+- Total_EMI_per_month
+- Amount_invested_monthly
+- Payment_Behaviour
+- Monthly_Balance
+- Credit_History_Age_Months
+- Age
+- Occupation
+- fe_1
+- fe_2
+- fe_3
+- fe_4
+- fe_5
+- fe_6
+- fe_7
+- fe_8
+- fe_9
+- fe_10
+- fe_11
+- fe_12
+- fe_13
+- fe_14
+- fe_15
+- fe_16
+- fe_17
+- fe_18
+- fe_19
+- fe_20

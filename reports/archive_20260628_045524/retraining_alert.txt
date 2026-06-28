@@ -1,0 +1,6 @@
+Retraining Alert
+================
+
+Generated At: 2026-06-28 04:55:06.130293
+Decision: Retraining required.
+Reason: PSI exceeded 0.20 or AUC dropped below 0.85.

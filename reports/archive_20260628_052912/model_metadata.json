@@ -1,0 +1,5 @@
+{
+  "best_model": "xgboost",
+  "selection_metric": "roc_auc",
+  "roc_auc": 0.7971051186017479
+}

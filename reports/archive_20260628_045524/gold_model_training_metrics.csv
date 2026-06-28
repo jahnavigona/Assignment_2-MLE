@@ -1,0 +1,3 @@
+model_name,roc_auc,average_precision,accuracy
+random_forest,0.7796329588014981,0.5682980007287015,0.75616
+logistic_regression,0.750274656679151,0.5263902095040807,0.71168

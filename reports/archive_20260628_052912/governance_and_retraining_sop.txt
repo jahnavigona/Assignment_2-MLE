@@ -1,0 +1,9 @@
+Model governance and retraining SOP
+
+Prediction point: loan application date. Only customer features with snapshot_date <= loan_start_date are used.
+Model store: model_store/best_model.joblib with metadata in model_metadata.json.
+Performance monitor: monthly ROC-AUC. Review if ROC-AUC < 0.60 or falls materially from training benchmark.
+Stability monitor: monthly PSI on prediction scores against baseline month. Drift alert if PSI > 0.25.
+Retraining SOP: retrain monthly or when performance_status=review / stability_status=drift_alert for two consecutive months.
+Deployment option: batch Airflow scoring for daily/monthly loan applications; promote to API service only if real-time application scoring is required.
+Approval: model owner reviews metrics, data leakage checks, feature documentation, and rollback model before production refresh.
